@@ -1,10 +1,14 @@
+import { useContext } from "react";
 import { Navbar, Nav, Container, Form, FormControl, Button, NavDropdown, Badge } from "react-bootstrap";
 import { FaShoppingCart, FaHeart, FaUser } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
+import { AdminAuthContext } from "./context/AdminAuth";
 
 
 function Navigation() {
+  const {logout} =useContext(AdminAuthContext)
+  
   return (
     <Navbar bg="white" expand="lg" className="shadow-sm py-3">
       <Container>
@@ -86,7 +90,7 @@ function Navigation() {
 
               <NavDropdown.Divider />
 
-              <NavDropdown.Item>
+              <NavDropdown.Item onClick={logout}>
                 Logout
               </NavDropdown.Item>
 

@@ -5,6 +5,12 @@ import Shop from './pages/Shop'
 import Product from './pages/Product'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
+import Login from './components/admin/Login'
+
+import { ToastContainer, toast } from "react-toastify";
+import Dashboard from './components/admin/Dashboard'
+import { AdminRequireAuth } from './components/admin/AdminRequireAuth'
+
 
 function App() {
 
@@ -18,8 +24,17 @@ function App() {
         <Route path='/cart' element={<Cart/>} />
         <Route path='/checkout' element={<Checkout/>} />
 
+
+        <Route path='/admin/login' element={<Login/>} />
+        <Route path='/admin/dashboard' element={
+          <AdminRequireAuth>
+            <Dashboard/>
+          </AdminRequireAuth>
+        }/>
       </Routes>
       </BrowserRouter>
+
+      <ToastContainer />
     </>
   )
 }
