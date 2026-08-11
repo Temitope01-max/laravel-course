@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from './Layout'
+import Layout from '../components/common/Layout'
 import HeroCarousel from '../components/HeroCarousel'
 
 import { Container, Row, Col } from "react-bootstrap";

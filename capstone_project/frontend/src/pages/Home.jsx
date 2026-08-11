@@ -20,7 +20,7 @@ import NewArrivals from '../components/NewArrivals';
 import LatestProducts from '../components/common/LatestProducts';
 import FeaturedProducts from '../components/common/FeaturedProducts';
 import Footer from '../components/Footer';
-import Layout from './Layout';
+import Layout from '../components/common/Layout';
 
 
 const Home = () => {
